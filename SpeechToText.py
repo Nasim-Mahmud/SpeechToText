@@ -24,11 +24,13 @@ engine = pt.init()
 voices = engine.getProperty('voices')
 
 if(text == 'hello'):
+    # Changing the gender of voice to female
     engine.setProperty('voice', voices[1].id)
     engine.say("Hello sweety!")
     
 
 elif(text == 'how are you'):
+    # Changing the gender of voice to male
     engine.setProperty('voice', voices[0].id)
     engine.say("Awesome buddy, thanks")
 
