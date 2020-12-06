@@ -20,3 +20,16 @@ with sr.Microphone() as source:
     except:
         print('Sorry, not clear')
 
+engine = pt.init()
+voices = engine.getProperty('voices')
+
+if(text == 'hello'):
+    engine.setProperty('voice', voices[1].id)
+    engine.say("Hello sweety!")
+    
+
+elif(text == 'how are you'):
+    engine.setProperty('voice', voices[0].id)
+    engine.say("Awesome buddy, thanks")
+
+engine.runAndWait()
